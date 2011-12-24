@@ -4,16 +4,38 @@ You cannot sell this, you can only share.
 This was created by Paulo Coutinho - 2012-12-23.
 Website: www.prsolucoes.com 
 Blog: www.prsolucoes.com/blog
+Email/msn: paulo@prsolucoes.com
+Skype: paulo.prsolucoes
 
 If you can, tell me where you use and what project
 to make a success case in my website.
 
-To install it, copy all (or clone with git) to:
+To install it you can use two ways.
+
+1 - make a clone and copy all to:
 [ARDUINO_INSTALL_PATH]/Java/libraries
 
-1 - Close your Arduino IDE to refresh and open again.
+2 - i'm using this way - clone the git repository to some path like 
+[HOME/workspace/arduino/prduino] and create a symbolic link to the libraries 
+that you will use. Example:
+
+If you want use "Sonar" library, create a symbolic link like this:
+ln -s [HOME/workspace/arduino/prduino]/PRDuino_Sonar [ARDUINO_INSTALL_PATH]/Java/libraries/PRDuino_Sonar
+
+Using this way, you only need pull git repository and your all references will
+be updated and you don't need copy all files to arduino libraries folder again.
+
+After copy files or create a symbolic link do:
+
+1 - Close your Arduino IDE to refresh libraries and open again.
+
 2 - Click on menu File -> Examples and you will see
 some examples with prefix PRDuino_*, all this examples
 are about our library to you test.
+
+3 - If you want import some library, go to menu and select one:
+Sketch -> Import Library -> PRDuino_*
+
+-----------------------------------------------------------------------------
 
 Thanks God, you are the best!

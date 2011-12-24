@@ -26,7 +26,7 @@ namespace PRDuino
         
         Sonar(int triggerPort, int echoPort);
         long scan();
-        long getRange(int scale);
+        long getRange(int scale, bool needScan);
         
     private:
         

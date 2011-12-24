@@ -29,17 +29,21 @@ namespace PRDuino
         digitalWrite(_triggerPort, LOW);
         
         _duration = pulseIn(_echoPort, HIGH);        
-        return _duration;
-    }
-    
-    long Sonar::getRange(int scale)
-    {
-        scan();
         
         _distanceINC = _duration / 74 / 2;
         _distanceCM  = _duration / 29 / 2;
         _distanceMT  = _distanceCM / 100;
-
+        
+        return _duration;
+    }
+    
+    long Sonar::getRange(int scale, bool needScan = true)
+    {
+        if (needScan)
+        {
+            scan();
+        }
+        
         switch (scale) 
         {
             case PRDuino::Sonar::SCALE_MT:

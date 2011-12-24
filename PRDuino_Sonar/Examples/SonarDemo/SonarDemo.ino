@@ -13,15 +13,17 @@ void setup()
 
 void loop() 
 {
-    Serial.print(sonar->getRange(PRDuino::Sonar::SCALE_INC)); 
+    sonar->scan();
+    
+    Serial.print(sonar->getRange(PRDuino::Sonar::SCALE_INC, false)); 
     Serial.println(" inches"); 
     delay(500); 
     
-    Serial.print(sonar->getRange(PRDuino::Sonar::SCALE_CM)); 
+    Serial.print(sonar->getRange(PRDuino::Sonar::SCALE_CM, false)); 
     Serial.println(" centimeters"); 
     delay(500); 
   
-    Serial.print(sonar->getRange(PRDuino::Sonar::SCALE_MT)); 
+    Serial.print(sonar->getRange(PRDuino::Sonar::SCALE_MT, false)); 
     Serial.println(" meters"); 
     delay(500);
 }
