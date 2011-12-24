@@ -1,0 +1,19 @@
+This is a free library to use with Arduino.
+You cannot sell this, you can only share.
+
+This was created by Paulo Coutinho - 2012-12-23.
+Website: www.prsolucoes.com 
+Blog: www.prsolucoes.com/blog
+
+If you can, tell me where you use and what project
+to make a success case in my website.
+
+To install it, copy all (or clone with git) to:
+[ARDUINO_INSTALL_PATH]/Java/libraries
+
+1 - Close your Arduino IDE to refresh and open again.
+2 - Click on menu File -> Examples and you will see
+some examples with prefix PRDuino_*, all this examples
+are about our library to you test.
+
+Thanks God, you are the best!
