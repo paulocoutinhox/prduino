@@ -1,5 +1,5 @@
 /*
- PRSonar.h - Library for sonar HC-SR04
+ Sonar.h - Library for sonar HC-SR04
  Created by Paulo Coutinho - 2012-12-23
  www.prsolucoes.com
  */
@@ -13,19 +13,16 @@
 #include "WProgram.h"
 #endif
 
-#define MT  2
-#define CM  1
-#define INC 0
-
 namespace PRDuino
 {
-    
     class Sonar
     {
-        
-        //enum scale { INC, CM, MT };
-        
+                
     public:
+        
+        static const int SCALE_INC = 1;
+        static const int SCALE_CM  = 2;
+        static const int SCALE_MT  = 3;
         
         Sonar(int triggerPort, int echoPort);
         long scan();
@@ -36,6 +33,7 @@ namespace PRDuino
         int _triggerPort;
         int _echoPort;
         long _duration;
+        long _distanceMT;        
         long _distanceCM;
         long _distanceINC;
         
